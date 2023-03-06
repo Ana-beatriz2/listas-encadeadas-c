@@ -114,11 +114,17 @@ int deletarUmElemento(int valor){
         return 0;
     }
 
-    while (aux -> prox != temporario){
-        aux = aux -> prox;
+    if (inicio == temporario){
+        inicio = temporario -> prox;
+    }
+    else{
+        while (aux -> prox != temporario){
+            aux = aux -> prox;
+        }
+
+        aux -> prox = temporario -> prox;
     }
 
-    aux -> prox = temporario -> prox;
     delete temporario;
     return 0;
 }
