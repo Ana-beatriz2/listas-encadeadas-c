@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 struct No {
     int dado;
     struct No *prox;
